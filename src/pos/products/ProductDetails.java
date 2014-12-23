@@ -40,6 +40,7 @@ public class ProductDetails extends javax.swing.JPanel {
         productDescription = new javax.swing.JLabel();
         productPrice = new javax.swing.JLabel();
         buyButton = new javax.swing.JButton();
+        terugButton = new javax.swing.JButton();
 
         image.setIcon(new javax.swing.ImageIcon(product.getImage()));
 
@@ -47,7 +48,7 @@ public class ProductDetails extends javax.swing.JPanel {
         productName.setText(product.getName());
 
         productDescription.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        productDescription.setText("Product Description");
+        productDescription.setText(product.getDescription());
 
         productPrice.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         productPrice.setText(java.text.NumberFormat.getCurrencyInstance(java.util.Locale.GERMANY).format(product.getPrice() / 100.0));
@@ -57,6 +58,13 @@ public class ProductDetails extends javax.swing.JPanel {
         buyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buyButtonActionPerformed(evt);
+            }
+        });
+
+        terugButton.setText("Terug");
+        terugButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terugButtonMouseClicked(evt);
             }
         });
 
@@ -76,7 +84,9 @@ public class ProductDetails extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(productDescription, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(114, 114, 114)))
-                        .addGap(155, 155, 155))
+                        .addGap(72, 72, 72)
+                        .addComponent(terugButton)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(productPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(237, 237, 237)
@@ -86,7 +96,11 @@ public class ProductDetails extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(image, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(image, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(terugButton)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                 .addGap(4, 4, 4)
@@ -105,6 +119,11 @@ public class ProductDetails extends javax.swing.JPanel {
         mainWindow.showPanel(new ProductList(mainWindow, product.getCategory()));
     }//GEN-LAST:event_buyButtonActionPerformed
 
+    private void terugButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terugButtonMouseClicked
+       mainWindow.showPanel(new ProductList(mainWindow, product.getCategory()));
+       
+    }//GEN-LAST:event_terugButtonMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buyButton;
@@ -112,5 +131,6 @@ public class ProductDetails extends javax.swing.JPanel {
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productName;
     private javax.swing.JLabel productPrice;
+    private javax.swing.JButton terugButton;
     // End of variables declaration//GEN-END:variables
 }

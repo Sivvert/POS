@@ -7,9 +7,12 @@
 package pos.products;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
 import java.util.List;
 import javax.swing.Box;
 import pos.MainWindow;
+import pos.DbManager;
+
 
 /**
  *
@@ -36,10 +39,12 @@ public class CategoryList extends javax.swing.JPanel {
     }
     
 private void addCategories() {
-    List<Category> cats = Category.findAll();
+    List<Category> cats = Category.findByCategory(mainWindow.getDbManager());
+    //oud List<Category> cats = Category.findAll(mainWindow.getDbManager());
     for (final Category category : cats) {
         CategoryItem categoryItem = new CategoryItem(category);
-        categoryItem.addMouseListener(new MouseAdapter(){
+        categoryItem.addMouseListener(new MouseAdapter()
+        {
         @Override
         public void mouseClicked(MouseEvent e){
             mainWindow.showPanel(new ProductList(mainWindow,category));

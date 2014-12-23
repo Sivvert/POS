@@ -19,9 +19,11 @@ import pos.MainWindow;
 public class ProductList extends javax.swing.JPanel {
      private final MainWindow mainWindow;
      private final Category category;
-     
+   
 private void addProducts() {
-    List<Product> prods = Product.findByCategory(category);
+    List<Product> prods = Product.findByProduct(category, mainWindow.getDbManager());
+   //oud List<Product> prods = Product.findAll(mainWindow.getDbManager());
+    
     for (final Product product : prods) {
         ProductItem productItem = new ProductItem(product);
         productItem.addMouseListener(new MouseAdapter() {
@@ -47,7 +49,7 @@ private void addProducts() {
         initComponents();
         addProducts();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -29,6 +29,7 @@ public class Basket extends Observable {
         // check if product is allready added to the basket
         if (products.containsKey(product)) {
             products.put(product, products.get(product) + 1);
+            
         } else {
             products.put(product, 1);
         }

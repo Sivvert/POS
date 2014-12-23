@@ -3,13 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pos;
 
 import pos.orders.Basket;
 import pos.products.CategoryList;
-
-
 
 /**
  *
@@ -60,8 +57,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(563, 563, 563))
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                        .addGap(545, 545, 545))
                     .addComponent(separator, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap())
         );
@@ -80,7 +77,7 @@ public class MainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void titleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_titleMouseClicked
-       showPanel(new CategoryList(this)); 
+        showPanel(new CategoryList(this));
     }//GEN-LAST:event_titleMouseClicked
 
     /**
@@ -114,12 +111,13 @@ public class MainWindow extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                MainWindow window= new MainWindow();
+                MainWindow window = new MainWindow();
                 window.initialize();
                 window.setVisible(true);
             }
         });
     }
+
     public void showPanel(javax.swing.JPanel newPanel) {
         panel.removeAll();
         panel.add(newPanel, java.awt.BorderLayout.CENTER);
@@ -127,12 +125,21 @@ public class MainWindow extends javax.swing.JFrame {
         panel.repaint();
     }
     private Basket basket;
+    private DbManager dbManager;
+
     private void initialize() {
-    // Setup the initial screen
-        this.basket = new Basket();
-       showPanel(new CategoryList(this));
-       
-}
+        // Create a new shopping basket
+        basket = new Basket();
+        // Open a connection to the Database
+        dbManager = new DbManager();
+        dbManager.openConnection();
+        // Setup the initial screen
+        showPanel(new CategoryList(this));
+    }
+
+    public DbManager getDbManager() {
+        return dbManager;
+    }
 
     public Basket getBasket() {
         return basket;

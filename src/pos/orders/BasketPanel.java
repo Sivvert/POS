@@ -7,7 +7,10 @@
 package pos.orders;
 
 //import java.util.Observable;
+import java.awt.Component;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import pos.MainWindow;
 import pos.products.Product;
@@ -52,16 +55,17 @@ public  class BasketPanel extends javax.swing.JPanel implements java.util.Observ
         title.setText("Winkelmand");
 
         orderLines.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        orderLines.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout orderLinesLayout = new javax.swing.GroupLayout(orderLines);
         orderLines.setLayout(orderLinesLayout);
         orderLinesLayout.setHorizontalGroup(
             orderLinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 366, Short.MAX_VALUE)
         );
         orderLinesLayout.setVerticalGroup(
             orderLinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 183, Short.MAX_VALUE)
+            .addGap(0, 73, Short.MAX_VALUE)
         );
 
         labelTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -86,15 +90,15 @@ public  class BasketPanel extends javax.swing.JPanel implements java.util.Observ
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(placeOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(orderLines, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(placeOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(labelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(97, 97, 97)
                         .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(10, 10, 10))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
                         .addGap(132, 132, 132)))
                 .addContainerGap())
         );
@@ -102,15 +106,15 @@ public  class BasketPanel extends javax.swing.JPanel implements java.util.Observ
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(orderLines, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                     .addComponent(labelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(placeOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(placeOrderButton, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -132,14 +136,20 @@ public  class BasketPanel extends javax.swing.JPanel implements java.util.Observ
     @Override
     public void update(java.util.Observable o, Object arg) {
         orderLines.removeAll();
-        orderLines.setLayout(new FlowLayout());
+        //orderLines.setLayout(new FlowLayout());
+        orderLines.setLayout(new BoxLayout(orderLines, BoxLayout.Y_AXIS));
+        orderLines.setAlignmentX(Component.LEFT_ALIGNMENT);  
     Basket basket = (Basket) o;
     for (Product product : basket.getProducts()) {
         OrderLine line = new OrderLine(product, basket.getProductAmount(product));
-        //javax.swing.JLabel line = new JLabel();
-        //line.setText("TEST");
+        
+        //javax.swing.JLabel lijn = new JLabel();
+        //lijn.setText("\n");
+       
         orderLines.add(line);
+       
     }
+   
     orderLines.add(javax.swing.Box.createVerticalGlue());
     price.setText(java.text.NumberFormat.getCurrencyInstance(java.util.Locale.GERMANY).format(basket.getTotalCosts() / 100.0)); //To change body of generated methods, choose Tools | Templates.
     }

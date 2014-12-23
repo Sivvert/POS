@@ -3,15 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/products/ProductList.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/orders/OrderLine.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/orders/OrderDetails.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/products/CategoryList.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/products/ProductDetails.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/products/Product.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/orders/Basket.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/MainWindow.java</file>
-            <file>file:/C:/Users/Tako/Desktop/Pos/src/pos/orders/BasketPanel.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/orders/BasketPanel.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/orders/OrderDetails.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/User.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/DbManager.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/products/ProductDetails.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/products/CategoryList.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/products/Product.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/orders/Basket.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/products/Category.java</file>
+            <file>file:/D:/documents/ahmet.kazan/NetBeansProjects/Pos/src/pos/MainWindow.java</file>
         </group>
     </open-files>
 </project-private>

@@ -24,6 +24,7 @@ private final int amount;
         this.product = product;
         this.amount = amount;
         initComponents();
+        
     }
 
     /**
@@ -57,7 +58,7 @@ private final int amount;
                 .addComponent(productAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(208, 208, 208)
+                .addGap(18, 18, 18)
                 .addComponent(totalPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
