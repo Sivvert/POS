@@ -60,18 +60,18 @@ public class OrderDetails extends javax.swing.JPanel {
         dateLabel = new javax.swing.JLabel();
         locationLabel = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
+        name = new javax.swing.JTextField();
+        adres = new javax.swing.JTextField();
         date = new javax.swing.JLabel();
-        location = new javax.swing.JLabel();
-        name = new javax.swing.JLabel();
         postcodeLabel = new javax.swing.JLabel();
-        postcode = new javax.swing.JLabel();
         woonplaatsLabel = new javax.swing.JLabel();
-        woonplaats = new javax.swing.JLabel();
         scrollPane = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
         priceLabel = new javax.swing.JLabel();
         price = new javax.swing.JLabel();
         orderButton = new javax.swing.JButton();
+        postCode = new javax.swing.JTextField();
+        woonPlaats = new javax.swing.JTextField();
 
         dateLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         dateLabel.setText("Datum:");
@@ -82,26 +82,18 @@ public class OrderDetails extends javax.swing.JPanel {
         nameLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         nameLabel.setText("Naam:");
 
+        name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        adres.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
         date.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         date.setText(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM, java.util.Locale.GERMAN).format(orderDate));
-
-        location.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        location.setText("jLabel5");
-
-        name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        name.setText("jLabel6");
 
         postcodeLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         postcodeLabel.setText("Post Code:");
 
-        postcode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        postcode.setText("jLabel1");
-
         woonplaatsLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         woonplaatsLabel.setText("Woonplaats:");
-
-        woonplaats.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        woonplaats.setText("jLabel1");
 
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,6 +127,10 @@ public class OrderDetails extends javax.swing.JPanel {
             }
         });
 
+        postCode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        woonPlaats.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,20 +158,17 @@ public class OrderDetails extends javax.swing.JPanel {
                             .addComponent(woonplaatsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(312, 312, 312))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(location, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(4, 4, 4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(woonplaats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(60, 60, 60))
-                                    .addComponent(postcode, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(16, 16, 16)))
-                        .addGap(361, 361, 361)))
+                                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(woonPlaats, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                        .addComponent(postCode, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(adres, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -188,27 +181,27 @@ public class OrderDetails extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nameLabel)
-                    .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(locationLabel)
-                    .addComponent(location, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(adres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(postcodeLabel)
-                    .addComponent(postcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(postCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(woonplaatsLabel)
-                    .addComponent(woonplaats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(woonPlaats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addComponent(scrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(price)
                     .addComponent(priceLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(orderButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(orderButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -224,20 +217,20 @@ public class OrderDetails extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField adres;
     private javax.swing.JLabel date;
     private javax.swing.JLabel dateLabel;
-    private javax.swing.JLabel location;
     private javax.swing.JLabel locationLabel;
-    private javax.swing.JLabel name;
+    private javax.swing.JTextField name;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JButton orderButton;
     private javax.swing.JTable orderTable;
-    private javax.swing.JLabel postcode;
+    private javax.swing.JTextField postCode;
     private javax.swing.JLabel postcodeLabel;
     private javax.swing.JLabel price;
     private javax.swing.JLabel priceLabel;
     private javax.swing.JScrollPane scrollPane;
-    private javax.swing.JLabel woonplaats;
+    private javax.swing.JTextField woonPlaats;
     private javax.swing.JLabel woonplaatsLabel;
     // End of variables declaration//GEN-END:variables
 }
