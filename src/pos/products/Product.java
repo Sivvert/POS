@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import pos.DbManager;
 
 /**
  *
@@ -179,10 +180,10 @@ public class Product {
 //    return products;
 //}
     //oud public static List<Product> findAll(pos.DbManager dbManager) {
-     public static List<Product> findByProduct(Category cat, pos.DbManager dbManager){
+     public static List<Product> findByCategory(Category cat, DbManager dbManager){
     List<Product> products = new ArrayList<>();
     try {
-        String sql = "select * FROM Product, Category where Category.Id = Product.Category_Id ORDER BY product.Name ASC ";
+        String sql = "SELECT * FROM product WHERE Category_Id =" + cat.getId() + " ORDER BY name ASC";
         ResultSet result = dbManager.doQuery(sql);
         while (result.next()) {
             Product prod = new Product();
@@ -193,6 +194,7 @@ public class Product {
             prod.setStock(result.getInt("Stock"));
             prod.setPrice(result.getInt("Price"));
             prod.setImage(ImageIO.read(result.getBinaryStream("Image")));
+            prod.setCategory(cat);
             products.add(prod);
             
         }

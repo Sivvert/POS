@@ -21,7 +21,7 @@ public class ProductList extends javax.swing.JPanel {
      private final Category category;
    
 private void addProducts() {
-    List<Product> prods = Product.findByProduct(category, mainWindow.getDbManager());
+    List<Product> prods = Product.findByCategory(category, mainWindow.getDbManager());
    //oud List<Product> prods = Product.findAll(mainWindow.getDbManager());
     
     for (final Product product : prods) {

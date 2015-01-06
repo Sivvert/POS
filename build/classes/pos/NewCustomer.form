@@ -16,39 +16,49 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-                      <Component id="Cmd_Clear" max="32767" attributes="0"/>
-                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="Cmd_save" max="32767" attributes="0"/>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="exitButton" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                              <Component id="Cmd_Clear" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cmd_save" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Component id="exitButton" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="title" max="32767" attributes="0"/>
+                              <EmptySpace min="188" pref="188" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="separator" alignment="0" min="-2" pref="355" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="woonplaatsLabel" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Component id="postcodeLabel" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="adresLabel" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="naamLabel" min="-2" pref="72" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="naam" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
+                                  <Component id="adres" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Component id="postCode" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
+                                  <Component id="woonPlaats" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="title" max="32767" attributes="0"/>
-                      <EmptySpace min="188" pref="188" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="separator" alignment="0" min="-2" pref="355" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="woonplaatsLabel" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
-                          <Component id="postcodeLabel" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
-                          <Component id="adresLabel" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
-                          <Component id="naamLabel" min="-2" pref="72" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="naam" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
-                          <Component id="adres" min="-2" pref="137" max="-2" attributes="0"/>
-                          <Component id="postCode" alignment="0" min="-2" pref="64" max="-2" attributes="0"/>
-                          <Component id="woonPlaats" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Order_Numer" min="-2" pref="113" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,7 +69,12 @@
               <Component id="title" min="-2" pref="27" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="separator" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Order_Numer" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -82,13 +97,13 @@
                   <Component id="woonplaatsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="woonPlaats" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="exitButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Cmd_save" alignment="3" max="32767" attributes="0"/>
                   <Component id="Cmd_Clear" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -118,6 +133,9 @@
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="naamActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="adresLabel">
       <Properties>
@@ -133,6 +151,9 @@
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adresActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="postcodeLabel">
       <Properties>
@@ -148,6 +169,9 @@
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="postCodeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="woonplaatsLabel">
       <Properties>
@@ -163,6 +187,9 @@
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="woonPlaatsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="exitButton">
       <Properties>
@@ -171,6 +198,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Terug"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Cmd_save">
       <Properties>
@@ -179,6 +209,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Opslaan"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cmd_saveActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Cmd_Clear">
       <Properties>
@@ -189,6 +222,16 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cmd_ClearActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Factuur Nummer:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Order_Numer">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Order_NumerActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

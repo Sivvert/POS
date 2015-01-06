@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/hva/Lionel/src/pos/MainWindow.java</file>
-            <file>file:/E:/hva/Lionel/src/pos/LogonScreen.java</file>
-            <file>file:/E:/hva/Lionel/src/pos/Role.java</file>
-            <file>file:/E:/hva/Lionel/src/pos/NewCustomer.java</file>
-            <file>file:/E:/hva/Lionel/src/pos/NewProducts.java</file>
-            <file>file:/E:/hva/Lionel/src/pos/DbManager.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/LogonWindow.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/CategoryList.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/DbManager.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/User.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/NewCustomer.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/Category.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/MainWindow.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/NewProduct.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/Product.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/ProductList.java</file>
         </group>
     </open-files>
 </project-private>

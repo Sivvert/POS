@@ -73,8 +73,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(310, 310, 310)
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                        .addGap(294, 294, 294)
                         .addComponent(jButton2)
                         .addGap(39, 39, 39)
                         .addComponent(jButton1)
@@ -104,11 +104,11 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_titleMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   showPanel (new NewCustomer());// TODO add your handling code here:
+    showPanel (new NewCustomer(this));// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     new NewProducts().setVisible(true);        // TODO add your handling code here:
+     showPanel (new NewProduct(this));        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -165,7 +165,8 @@ public class MainWindow extends javax.swing.JFrame {
         dbManager = new DbManager();
         dbManager.openConnection();
         // Setup the initial screen
-        showPanel(new CategoryList(this));
+        //showPanel(new CategoryList(this));
+        showPanel (new LogonWindow(this));
     }
 
     public DbManager getDbManager() {
