@@ -6,10 +6,13 @@
 
 package pos.orders;
 
+import java.sql.ResultSet;
 import java.text.NumberFormat;
 import java.util.Date;
 import javax.swing.table.DefaultTableModel;
+import pos.DbManager;
 import pos.MainWindow;
+import static pos.NewCustomer.createCustomer;
 import pos.products.Product;
 
 /**
@@ -23,6 +26,15 @@ public class OrderDetails extends javax.swing.JPanel {
      * Creates new form OrderDetails
      
      */
+//   public static void addOrderAddress (DbManager dbManager, String OrderNumber , String Name, String Address, String ZipCode, String City) {
+//        ResultSet result = dbManager.insertQuery("INSERT INTO pos.customer (`OrderNumber`, `Name`, `Address`, `ZipCode`, `City`) \n" +
+//"	VALUES ('" + OrderNumber + "', '" + Name + "' , '" + Address + "', '" + ZipCode + "' , '" + City + "'); ");
+//        
+// }
+    
+    
+    
+    
     public OrderDetails(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
         this.orderDate = new Date();
@@ -44,9 +56,6 @@ public class OrderDetails extends javax.swing.JPanel {
     }
 }
 
-    //public OrderDetails(MainWindow mainWindow) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   // }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,8 +220,9 @@ public class OrderDetails extends javax.swing.JPanel {
 
     private void orderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderButtonActionPerformed
         // TODO add your handling code here:
+        //addOrderAddress(mainWindow.getDbManager(), Order_Numer.getText(), name.getText(), adres.getText(), postCode.getText(), woonPlaats.getText());
         mainWindow.getBasket().empty();
-        mainWindow.showPanel(new OrderSend());
+        mainWindow.showPanel(new OrderSend(mainWindow));
     }//GEN-LAST:event_orderButtonActionPerformed
 
 

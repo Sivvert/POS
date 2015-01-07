@@ -8,6 +8,7 @@ package pos;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import pos.products.CategoryList;
@@ -22,6 +23,7 @@ import pos.products.CategoryList;
  */
 public class NewCustomer extends javax.swing.JPanel {
    private final MainWindow mainWindow;
+
 
  public static void createCustomer(DbManager dbManager, String OrderNumber , String Name, String Address, String ZipCode, String City) {
 //"SELECT 1 from user where `name` = '" + username + "' and `password` = '" + password + "';");
@@ -39,6 +41,9 @@ public class NewCustomer extends javax.swing.JPanel {
         initComponents();
         
     }
+
+ 
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,6 +69,7 @@ public class NewCustomer extends javax.swing.JPanel {
         Cmd_Clear = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Order_Numer = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         title.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         title.setText("Nieuwe klant toevoegen");
@@ -89,7 +95,7 @@ public class NewCustomer extends javax.swing.JPanel {
         });
 
         postcodeLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        postcodeLabel.setText("Post code:");
+        postcodeLabel.setText("Postcode:");
 
         postCode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         postCode.addActionListener(new java.awt.event.ActionListener() {
@@ -132,11 +138,18 @@ public class NewCustomer extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("Factuur Nummer:");
+        jLabel1.setText("Factuur Nr:");
 
         Order_Numer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Order_NumerActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Bestaande Klanten");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -149,13 +162,6 @@ public class NewCustomer extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(116, 116, 116)
-                                .addComponent(Cmd_Clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Cmd_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(188, 188, 188))
@@ -171,12 +177,23 @@ public class NewCustomer extends javax.swing.JPanel {
                                     .addComponent(naam, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(adres, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(postCode, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(woonPlaats, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(woonPlaats, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Order_Numer, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(116, 116, 116)
+                                .addComponent(Cmd_Clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Cmd_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGap(32, 32, 32))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(Order_Numer, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -213,7 +230,9 @@ public class NewCustomer extends javax.swing.JPanel {
                     .addComponent(exitButton)
                     .addComponent(Cmd_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Cmd_Clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(64, 64, 64))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(23, 23, 23))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -258,6 +277,10 @@ public class NewCustomer extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_Order_NumerActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
             
             
             
@@ -284,6 +307,7 @@ public class NewCustomer extends javax.swing.JPanel {
     private javax.swing.JTextField adres;
     private javax.swing.JLabel adresLabel;
     private javax.swing.JButton exitButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField naam;
     private javax.swing.JLabel naamLabel;
@@ -294,6 +318,12 @@ public class NewCustomer extends javax.swing.JPanel {
     private javax.swing.JTextField woonPlaats;
     private javax.swing.JLabel woonplaatsLabel;
     // End of variables declaration//GEN-END:variables
+
+    private static class ExcitingCustomerLine extends JPanel {
+
+        public ExcitingCustomerLine(MainWindow mainWindow) {
+        }
+    }
 
     
 }

@@ -110,7 +110,8 @@ public class LogonWindow extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       if (User.findCredentials(mainWindow.getDbManager(), jTextField1.getText(), jPasswordField1.getText()))
-            mainWindow.showPanel(new CategoryList(mainWindow));  // TODO add your handling code here:
+           mainWindow.showPanel(new SelectPanel(mainWindow));
+             // mainWindow.showPanel(new CategoryList(mainWindow));  // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -6,16 +6,21 @@
 
 package pos.orders;
 
+import pos.MainWindow;
+import pos.products.CategoryList;
+
 /**
  *
  * @author Lionel
  */
 public class OrderSend extends javax.swing.JPanel {
+    private final MainWindow mainWindow;
 
     /**
      * Creates new form OrderSend
      */
-    public OrderSend() {
+    public OrderSend(MainWindow mainWindow) {
+       this.mainWindow = mainWindow;
         initComponents();
     }
 
@@ -41,6 +46,11 @@ public class OrderSend extends javax.swing.JPanel {
 
         returnButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         returnButton.setText("Return to menu");
+        returnButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -71,6 +81,10 @@ public class OrderSend extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void returnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnButtonActionPerformed
+     mainWindow.showPanel(new CategoryList(mainWindow));    // TODO add your handling code here:
+    }//GEN-LAST:event_returnButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -4,14 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/LogonWindow.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/SelectPanel.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/orders/OrderLine.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/CategoryList.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/DbManager.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/User.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/NewCustomer.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/Product.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/CategoryItem.java</file>
+            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/orders/OrderDetails.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/Category.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/MainWindow.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/NewProduct.java</file>
-            <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/Product.java</file>
             <file>file:/D:/documents/ahmet.kazan/PosgroepOnline/src/pos/products/ProductList.java</file>
         </group>
     </open-files>
