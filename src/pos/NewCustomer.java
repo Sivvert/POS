@@ -91,7 +91,7 @@ public class NewCustomer extends javax.swing.JPanel {
         });
 
         postcodeLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        postcodeLabel.setText("Post code:");
+        postcodeLabel.setText("Postcode:");
 
         postCode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         postCode.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +133,6 @@ public class NewCustomer extends javax.swing.JPanel {
                 Order_NumerActionPerformed(evt);
             }
         });
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/JordyKroon/Dropbox/Schermafdrukken/Schermafdruk 2014-12-18 23.33.06.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

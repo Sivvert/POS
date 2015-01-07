@@ -30,17 +30,13 @@ public class OrderSend extends javax.swing.JPanel {
 
         title = new javax.swing.JLabel();
         message = new javax.swing.JLabel();
-        returnButton = new javax.swing.JButton();
 
         title.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        title.setText("Order Send");
+        title.setText("Bestelling geplaatst");
 
         message.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        message.setText(" You order has been created succesfully. It will be shipped out as soon as possible.");
+        message.setText("De bestelling is succesvol geplaatst.");
         message.setToolTipText("");
-
-        returnButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        returnButton.setText("Return to menu");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -54,10 +50,6 @@ public class OrderSend extends javax.swing.JPanel {
                         .addGap(460, 460, 460))
                     .addComponent(message, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(276, 276, 276)
-                .addComponent(returnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,16 +58,13 @@ public class OrderSend extends javax.swing.JPanel {
                 .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(returnButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(54, 54, 54))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel message;
-    private javax.swing.JButton returnButton;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
