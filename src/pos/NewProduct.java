@@ -68,18 +68,10 @@ private final MainWindow mainWindow;
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         removeButton = new javax.swing.JButton();
-<<<<<<< HEAD
         title = new javax.swing.JLabel();
         separator = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         fotoField = new javax.swing.JFileChooser();
-=======
-        jLabel9 = new javax.swing.JLabel();
-        jFileChooser1 = new javax.swing.JFileChooser();
-        jLabel10 = new javax.swing.JLabel();
-
-        setBackground(new java.awt.Color(255, 255, 255));
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
 
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,26 +115,20 @@ private final MainWindow mainWindow;
             }
         });
 
-        jLabel1.setText("Product Naam:");
+        jLabel1.setText("Product Naam");
 
-        jLabel2.setText("Leverancier:");
+        jLabel2.setText("Leverancier");
 
-        jLabel3.setText("Category:");
+        jLabel3.setText("Category");
 
-        jLabel4.setText("Voorraad:");
+        jLabel4.setText("Voorraad");
 
-        jLabel5.setText("Prijs:");
+        jLabel5.setText("Prijs");
 
-        jLabel6.setText("Omschrijving:");
+        jLabel6.setText("Omschrijving");
 
-        jLabel7.setText("Product Id:");
+        jLabel7.setText("Product Id");
 
-<<<<<<< HEAD
-=======
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel8.setText("Nieuw product toevoegen");
-
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
         jButton1.setText("Opslaan");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +143,6 @@ private final MainWindow mainWindow;
             }
         });
 
-<<<<<<< HEAD
         title.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         title.setText("Nieuwe Product toevoegen");
 
@@ -168,12 +153,6 @@ private final MainWindow mainWindow;
                 fotoFieldActionPerformed(evt);
             }
         });
-=======
-        jLabel9.setIcon(new javax.swing.ImageIcon("/Users/JordyKroon/Dropbox/Schermafdrukken/Schermafdruk 2014-12-18 23.33.06.png")); // NOI18N
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel10.setText("Afbeelding toevoegen");
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -181,17 +160,10 @@ private final MainWindow mainWindow;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-<<<<<<< HEAD
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-=======
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -204,11 +176,7 @@ private final MainWindow mainWindow;
                                 .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addComponent(jLabel7))
-<<<<<<< HEAD
                         .addGap(76, 76, 76)
-=======
-                        .addGap(26, 26, 26)
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
@@ -219,7 +187,6 @@ private final MainWindow mainWindow;
                             .addComponent(priceField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(descriptionField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(idField, javax.swing.GroupLayout.Alignment.TRAILING)
-<<<<<<< HEAD
                             .addComponent(supplierField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 44, Short.MAX_VALUE)))
@@ -230,21 +197,10 @@ private final MainWindow mainWindow;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(210, 210, 210))
-=======
-                            .addComponent(supplierField)
-                            .addComponent(nameField)))
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
@@ -254,15 +210,6 @@ private final MainWindow mainWindow;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
-=======
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel10))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -276,11 +223,7 @@ private final MainWindow mainWindow;
                                 .addComponent(descriptionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
-<<<<<<< HEAD
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-=======
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
                             .addComponent(priceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7))
                         .addGap(18, 18, 18)
@@ -298,22 +241,12 @@ private final MainWindow mainWindow;
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
-<<<<<<< HEAD
                             .addComponent(removeButton))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                         .addComponent(fotoField, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46))))
-=======
-                            .addComponent(removeButton)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -342,6 +275,10 @@ private final MainWindow mainWindow;
         // TODO add your handling code here:
     }//GEN-LAST:event_descriptionFieldActionPerformed
 
+    private void priceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceFieldActionPerformed
+
     private void stockFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stockFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_stockFieldActionPerformed
@@ -354,7 +291,6 @@ private final MainWindow mainWindow;
         // TODO add your handling code here:
     }//GEN-LAST:event_supplierFieldActionPerformed
 
-<<<<<<< HEAD
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idFieldActionPerformed
@@ -362,11 +298,6 @@ private final MainWindow mainWindow;
     private void fotoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fotoFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fotoFieldActionPerformed
-=======
-    private void priceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_priceFieldActionPerformed
->>>>>>> 67f05602f2a92e2ba393ca186eccaaeb329d4e34
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -377,7 +308,6 @@ private final MainWindow mainWindow;
     private javax.swing.JButton jButton1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -385,7 +315,6 @@ private final MainWindow mainWindow;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField priceField;
     private javax.swing.JButton removeButton;
