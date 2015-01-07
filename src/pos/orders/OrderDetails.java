@@ -99,7 +99,7 @@ public class OrderDetails extends javax.swing.JPanel {
         date.setText(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM, java.util.Locale.GERMAN).format(orderDate));
 
         postcodeLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        postcodeLabel.setText("Post Code:");
+        postcodeLabel.setText("Postcode:");
 
         woonplaatsLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         woonplaatsLabel.setText("Woonplaats:");
